@@ -1,6 +1,18 @@
+import requests
+import time
+
+
 # Requisito 1
 def fetch(url):
-    """Initial commit"""
+    headers = {"user-agent": "Fake user-agent"}
+    try:
+        response = requests.get(url, headers=headers, timeout=3)
+        response.raise_for_status()
+        time.sleep(1)
+    except (requests.HTTPError, requests.ReadTimeout):
+        return None
+    else:
+        return response.text
 
 
 # Requisito 2
