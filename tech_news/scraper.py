@@ -87,5 +87,5 @@ def get_tech_news(amount):
         news_infos.append(news_info)
 
     create_news(news_infos)
-
+    print("Dados coletados e salvos com sucesso!")
     return news_infos
