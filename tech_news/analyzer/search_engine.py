@@ -43,4 +43,7 @@ def search_by_tag(tag):
 
 # Requisito 9
 def search_by_category(category):
-    """Seu código deve vir aqui"""
+    search_query = {"category": re.compile(category, re.IGNORECASE)}
+    category_found = search_news(search_query)
+
+    return standardized(category_found)
