@@ -1,5 +1,6 @@
 from tech_news.database import search_news
 from datetime import datetime
+import re
 
 
 def standardized(query_result):
@@ -8,8 +9,7 @@ def standardized(query_result):
 
 # Requisito 6
 def search_by_title(title):
-    formated_title = title.lower()
-    search_query = {"title": {"$regex": formated_title}}
+    search_query = {"title": re.compile(title, re.IGNORECASE)}
 
     titles_found = search_news(search_query)
 
@@ -35,7 +35,10 @@ def search_by_date(date):
 
 # Requisito 8
 def search_by_tag(tag):
-    """Seu código deve vir aqui"""
+    search_query = {"tags": re.compile(tag, re.IGNORECASE)}
+    tag_found = search_news(search_query)
+
+    return standardized(tag_found)
 
 
 # Requisito 9
