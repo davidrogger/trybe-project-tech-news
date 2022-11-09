@@ -27,4 +27,14 @@ def top_5_news():
 
 # Requisito 11
 def top_5_categories():
-    """Seu código deve vir aqui"""
+    db = get_collection()
+
+    pipeline = [
+        {"$group": {"_id": "$category", "count": {"$sum": 1}}},
+        {"$sort": {"count": -1, "_id": 1}},
+    ]
+
+    counted_categotires = list(db.aggregate(pipeline))
+    categories = [category["_id"] for category in counted_categotires[:5]]
+
+    return categories
