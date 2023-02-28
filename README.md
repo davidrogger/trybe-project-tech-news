@@ -2,7 +2,7 @@
 
 ## Seção: `Raspagem de dados`
 
-- Introdução a raspagem de dados, configurando crawlers usando [requests](https://requests.readthedocs.io/en/latest/), [selenium](https://selenium-python.readthedocs.io/) e o [befautiful Soup](https://beautiful-soup-4.readthedocs.io/en/latest/). Para coleta de dados na web, e armazenamento em banco de dados para consultas futuras.
+- Abordagem de coleta de dados pela web, apresentando ferramentas conhecidas como, [Requests](https://requests.readthedocs.io/en/latest/), [Parsel](https://parsel.readthedocs.io/en/latest/usage.html), [Selenium](https://www.selenium.dev/), [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) e uso do [pymongo](https://pymongo.readthedocs.io/en/stable/) para salvar as informações coletadas em um mango de dados mongodb.
 
 #
 <div align="center">
@@ -14,8 +14,6 @@
 >Coleta de dados pela internet
 ## Projeto: `Tech News`
 
-- Terceiro projeto do modulo de Ciências da Computação da trybe.
-- Raspagem de dados tema da seção 3, que aborda, o conceito e abordagem de coleta de dados pela web, apresentando ferramentas conhecidas como, [Requests](https://requests.readthedocs.io/en/latest/), [Parsel](https://parsel.readthedocs.io/en/latest/usage.html), [Selenium](https://www.selenium.dev/), [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) e uso do [pymongo](https://pymongo.readthedocs.io/en/stable/) para salvar as informações coletadas em um mango de dados mongodb.
 - Desenvolvido metodos, para requisitar e coletar dados do [blog da trybe](https://blog.betrybe.com/) e salvar no banco mongodb.
 
 <details>
